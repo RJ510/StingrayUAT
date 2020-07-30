@@ -1,0 +1,7 @@
+<suite name="Final Release- Gadgets Gallery- 24052020">
+<suite-files>
+<suite-file path="./PlugIns.xml"></suite-file>
+<suite-file path="./AssetMenu.xml"></suite-file>
+</suite-files>
+
+</suite>
