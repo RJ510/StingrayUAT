@@ -67,30 +67,18 @@ public class SearchAndEditAsset extends BaseInit {
 			
 			for(int col=3;col<tablecol.size();) {
 				tablecol.get(col).click();
+				System.out.println("clicked on col");
 				break;
 			}
-			isElementPresent("EditThisItem_linkText").click();
+			WebElement menuitem= isElementPresent("contextmenu_xpath");
+			menuitem.findElement(By.linkText("Edit This Item")).click();
+			System.out.println("clicked on edit this item");
 			Thread.sleep(5000);
+			break;
 		}
 		
-		/*WebElement searchforassetrow= isElementPresent("searchforasssetrow_xpath");
-
-		WebElement trTag= searchforassetrow.findElement(By.tagName("tr"));
-		System.out.println(trTag.getSize());
-		WebElement Frow= isElementPresent("searchforassetFirstRow_xpath");
-	
-		
-	
-		
-		if(trTag.getTagName() !=null) {
-			System.out.println(trTag +"is not empty");
-			executor.executeScript("arguments[0].click();", Frow);
-			System.out.println("click on the row");
-			isElementPresent("EditThisItem_linkText").click();
-			Thread.sleep(5000);
 			
-
-		}*/
+			driver.close();
+		}		
 	}
 
-}
